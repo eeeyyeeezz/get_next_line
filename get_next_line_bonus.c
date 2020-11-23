@@ -59,7 +59,7 @@ int					get_next_line(int fd, char **line)
 	if (BUFFER_SIZE <= 0 || !line || !(buf = malloc(BUFFER_SIZE + 1))
 		|| fd < 0 || fd > 1024 || (read(fd, buf, 0) == -1))
 		return (-1);
-	ptr = check_remainer(&remainer[fd], line);
+	ptr = check_remainer(&(remainer[fd]), line);
 	while (!ptr && (byte_read = read(fd, buf, BUFFER_SIZE)))
 	{
 		buf[byte_read] = '\0';
