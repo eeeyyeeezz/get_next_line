@@ -1,17 +1,17 @@
 # get_next_line
 ### _Функция для построчного парсинга_
-- *Для компиляции*
+- *Для компиляции и запуска*
 ```sh
-make
-```
-- *Удаление объектных файлов и перекомпиляция*
-```sh
-make (f)clean // make re
+gcc -Wall -Wextra -Werror *.c -o GNL && ./GNL
 ```
 - *Пример использования в main функции*
 
 
 ```
+#include "get_next_line.h"
+#include "get_next_line_bonus.h"
+#include <printf.h>
+
 int main(){
     char *line;
     int fd = open("txt.txt", O_RDONLY);
